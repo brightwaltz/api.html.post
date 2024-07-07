@@ -6,7 +6,13 @@
     <p>Url: <input type="text" id="url" name="url" size="100" value="https://example.com/api/hoge"></p>
     <p>Method: <input type="text" id="method" name="method" size="10" value="post"></p>
     <p>Parameter:</p>
-    <div id="input-param">
+        <div id="input-param">
+        <p>
+            <textarea id="story" name="story" rows="5" cols="33"></textarea>
+        </p>
+    </div>
+
+<!--     <div id="input-param">
         <p>
             <input type="text" class="param-key" size="10" value="name">
             <input type="text" class="param-value" size="30" value="hoge fuga">
@@ -30,7 +36,7 @@
             </p>
         </template>
     </div>
-    <p><button id="add" type="button">add</button></p>
+    <p><button id="add" type="button">add</button></p> -->
 
     <p><button id="submit" type="button">submit</button></p>
     <textarea id="response" cols=120 rows=10 disabled>Response Values</textarea>
@@ -69,6 +75,7 @@
                 });
                 param = JSON.stringify(param);
             }
+            param = $("#story").val();
 
             // console.log(param);
             // return;
