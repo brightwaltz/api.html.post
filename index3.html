@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <script>
+    function submitForm() {
+      var jsonData = document.getElementById('jsonInput').value;
+      google.script.run.withSuccessHandler(updatePage).processJson(jsonData);
+    }
+    
+    function updatePage(result) {
+      document.getElementById('result').innerHTML = result;
+    }
+  </script>
+</head>
+<body>
+  <h1>JSON処理フォーム</h1>
+  <textarea id="jsonInput" rows="10" cols="50"></textarea><br>
+  <button onclick="submitForm()">送信</button>
+  <div id="result"></div>
+</body>
+</html>

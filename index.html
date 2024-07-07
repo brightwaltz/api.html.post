@@ -12,12 +12,12 @@
         </p>
     </div>
 
-<!--     <div id="input-param">
+    <div id="input-param">
         <p>
             <input type="text" class="param-key" size="10" value="name">
             <input type="text" class="param-value" size="30" value="hoge fuga">
         </p>
-        <p>
+        <p><!-- 
             <input type="text" class="param-key" size="10" value="email">
             <input type="text" class="param-value" size="30" value="hoge@example.com">
         </p>
@@ -28,7 +28,7 @@
         <p>
             <input type="text" class="param-key" size="10" value="prefecture[]">
             <input type="text" class="param-value" size="30" value="神奈川県">
-        </p>
+        </p> -->
         <template id="input-template">
             <p>
                 <input type="text" class="param-key" size="10" value="">
@@ -36,7 +36,7 @@
             </p>
         </template>
     </div>
-    <p><button id="add" type="button">add</button></p> -->
+    <p><button id="add" type="button">add</button></p>
 
     <p><button id="submit" type="button">submit</button></p>
     <textarea id="response" cols=120 rows=10 disabled>Response Values</textarea>
@@ -76,7 +76,7 @@
                 param = JSON.stringify(param);
             }
             param = $("#story").val();
-
+            console.log(param);
             // console.log(param);
             // return;
 
